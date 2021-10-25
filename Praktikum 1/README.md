@@ -23,4 +23,4 @@
 
   Dengan menggunakan HTML buatlah desain form HTML, sebagai berikut:
   
-![image](https://user-images.githubusercontent.com/72422050/138559501-f3c5c2cc-64c0-4020-9f39-2f6a813b9e67.png)
+![image](https://user-images.githubusercontent.com/72425140/138627961-f10a3eff-d3a5-45a3-8b34-78ddd00565e3.png)
