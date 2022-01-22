@@ -1,7 +1,7 @@
 <?php
     $array = [1,2,3,4,5];
 
-    $nama = "Fajar";
+    $nama = "Iqbal";
     $nilai = 90;
 ?>
 
@@ -62,13 +62,13 @@
         {{ "Jawabanya salah" }}
     @endif
 
-    @if ($nama == "Udin")
+    @if ($nama == "Asep")
         <p>
-            {{ "Nama saya Udin" }}
+            {{ "Nama saya Asep" }}
         </p>
-    @elseif($nama == "Fajar")
+    @elseif($nama == "Iqbal")
         <p>
-            {{ "Nama saya Fajar" }}
+            {{ "Nama saya Iqbal" }}
         </p>
     @else
         <p>
