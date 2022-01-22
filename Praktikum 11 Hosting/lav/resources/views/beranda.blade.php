@@ -7,65 +7,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-10 mt-4">
-                <h1>Selamat Datang di Sini All</h1>
-            </div>
-            <div class="col-5 mt-2">
-                <h6>Gimana Kabs?</h6>
-                <h6>Kenalin Anggota Kiyowo</h6>
-            </div>
-        </div>
-        <section id="portfolio" class="portfolio bg-light pb-4">
-    <div class="container">
-      <div class="row mb-4 pt-4">
-        <div class="col text-center">
-          <h2>Gatau Ini Apa</h2>
-        </div>
-      </div>
+    <?php
+    $array = [1,2,3,4,5];
 
-      <div class="row mb-4">
-        <div class="col-md">
-          <div class="card">
-          <img src="{{ asset('storage/img/harry.jpg') }}" width="50%" alt="" />
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card">
-          <img src="{{ asset('storage/img/niall.jpg') }}" width="50%" alt="" />
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card">
-          <img src="{{ asset('storage/img/louis.jpg') }}" width="50%" alt="" />
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md">
-          <div class="card">
-          <img src="{{ asset('storage/img/zayn.jpg') }}" width="50%" alt="" />
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    $nama = "Iqbal Rasyid";
+    $nilai = 90;
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Beranda</title>
+</head>
+<body>
+    <h1>Ini Adalah Halaman Beranda</h1>
+
+    <?php echo "Halo Kawan" ?>
+
+    <p>
+        {{ "Selamat Datang" }}
+    </p>
+
+    <?php if(1+1 == 3) { ?>
+        <p>
+            {{ "Selamat Pagi" }}
+        </p>
+    <?php } ?>
+
+    @if (1+1 == 2)
+        <p>
+            {{ 'Selamat Siang' }}
+        </p>
+    @endif
+
+    <hr>
+
+    <h1>Perulangan</h1>
+
+    <?php for($i = 0; $i < count($array); $i++) { ?>
+        <p>
+            {{ $array[$i] }}
+        </p>
+    <?php } ?>
+
+    @for($i = 0; $i < count($array); $i++)
+        <p>
+            {{ $array[$i] }}
+        </p>
+    @endfor
+
+    <hr>
+
+    <h1>Percabangan</h1>
+
+    @if (1+1 == 3)
+        <p>
+            {{ 'Jawabannya benar' }}
+        </p>
+    @else
+        {{ "Jawabanya salah" }}
+    @endif
+
+    @if ($nama == "Abdi")
+        <p>
+            {{ "Nama saya Abdi" }}
+        </p>
+    @elseif($nama == "Iqbal Rasyid")
+        <p>
+            {{ "Nama saya Iqbal Rasyid" }}
+        </p>
+    @else
+        <p>
+            {{ "Nama saya tidak diketahui" }}
+        </p>
+    @endif
+
+    <hr>
+
+    <h1>Percabangan Switch</h1>
+
+    @switch($nilai)
+        @case(90)
+            {{ "Nilai Anda A" }}
+            @break
+
+        @case(80)
+            {{ "Nilai Anda B" }}
+            @break
+
+        @case(70)
+            {{ "Nilai Anda C" }}
+            @break
+
+        @default
+            {{ "Nilai Anda D" }}
+
+    @endswitch
+
+</body>
+</html>
+
 </body>
 </html>
 @endsection
